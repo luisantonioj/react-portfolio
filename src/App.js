@@ -45,7 +45,7 @@ function App() {
             <div className="row">
                 <div className="col-lg-4 col-md-6 mb-4">
                     <div className="project-card h-100">
-                        <div className="project-image"><img src={proj1} alt="Enrollment"></img></div>
+                        <div className="project-image"><img src={proj1} alt="Enrollment"/></div>
                         <div className="card-body p-4 d-flex flex-column">
                             <h5 className="project-title">Enrollment Management System</h5>
                             <p className="project-description">An enrollment management system that implements CRUD
@@ -60,7 +60,7 @@ function App() {
                 </div>
                 <div className="col-lg-4 col-md-6 mb-4">
                     <div className="project-card h-100">
-                        <div className="project-image"><img src={proj2} alt="Gen-D"></img></div>
+                        <div className="project-image"><img src={proj2} alt="Gen-D"/></div>
                         <div className="card-body p-4 d-flex flex-column">
                             <h5 className="project-title">EquiCity: Web-Based Urban Planner
                             </h5>
@@ -76,7 +76,7 @@ function App() {
                 </div>
                 <div className="col-lg-4 col-md-6 mb-4">
                     <div className="project-card h-100">
-                        <div className="project-image"><img src={proj3} alt="KoKoDishApp"></img></div>
+                        <div className="project-image"><img src={proj3} alt="KoKoDishApp"/></div>
                         <div className="card-body p-4 d-flex flex-column">
                             <h5 className="project-title">KoKoDishApp: Capstone Product Selling
                                 Application</h5>
@@ -93,7 +93,7 @@ function App() {
         </div>
     </section>
 
-    <div className="modal fade" id="project1Modal" tabindex={-1}>
+    <div className="modal fade" id="project1Modal" tabIndex={-1}>
         <div className="modal-dialog modal-lg">
             <div className="modal-content">
                 <div className="modal-header">
@@ -107,13 +107,11 @@ function App() {
                             className="img-fluid rounded shadow"/>
                     </div>
                     <div className="d-flex flex-wrap gap-2">
-                        <span className="badge rounded-pill custom-pill" style="background-color: #0d6efd;">HTML5</span>
-                        <span className="badge rounded-pill custom-pill" style="background-color: #5f9ea0;">CSS3</span>
-                        <span className="badge rounded-pill custom-pill text-dark"
-                            style="background-color: #ced4da;">JavaScript</span>
-                        <span className="badge rounded-pill custom-pill text-dark"
-                            style="background-color: #b0c4de;">PHP</span>
-                        <span className="badge rounded-pill custom-pill" style="background-color: #343a40;">MySQL</span>
+                        <span className="badge rounded-pill custom-pill" style={{ backgroundColor: "#0d6efd" }}>HTML5</span>
+                        <span className="badge rounded-pill custom-pill" style={{ backgroundColor: "#5f9ea0" }}>CSS3</span>
+                        <span className="badge rounded-pill custom-pill text-dark" style={{ backgroundColor: "#ced4da" }}>JavaScript</span>
+                        <span className="badge rounded-pill custom-pill text-dark" style={{ backgroundColor: "#b0c4de" }}>PHP</span>
+                        <span className="badge rounded-pill custom-pill" style={{ backgroundColor: "#0d6efd" }}>MySQL</span>
                     </div><br/>
                     <h6><i className="fas fa-info-circle"></i> Project Overview</h6>
                     <p>This enrollment management system was developed as part of my academic coursework to streamline
@@ -124,8 +122,8 @@ function App() {
                     <ul>
                         <li>Add, view, update, and delete student records</li>
                         <li>Manage course and subject listings</li>
-                        <li>Enroll students into classNamees with validation checks</li>
-                        <li>Generate and display className lists</li>
+                        <li>Enroll students into classes with validation checks</li>
+                        <li>Generate and display class lists</li>
                         <li>Responsive design for accessibility across devices</li>
                     </ul>
                 </div>
@@ -133,7 +131,7 @@ function App() {
         </div>
     </div>
 
-    <div className="modal fade" id="project2Modal" tabindex={-1}>
+    <div className="modal fade" id="project2Modal" tabIndex={-1}>
         <div className="modal-dialog modal-lg">
             <div className="modal-content">
                 <div className="modal-header">
@@ -146,7 +144,7 @@ function App() {
                         <img src={proj2} alt="EquiCity" className="img-fluid rounded shadow"/>
                     </div>
                     <div className="d-flex flex-wrap gap-2">
-                        <span className="badge rounded-pill custom-pill" style="background-color: #0d6efd;">Figma</span>
+                        <span className="badge rounded-pill custom-pill" style={{ backgroundColor: "#0d6efd" }}>Figma</span>
                     </div><br/>
                     <h6><i className="fas fa-info-circle"></i> Project Overview</h6>
                     <p>This web-based urban planning tool was a proposal developed to address Lipa City's worsening
@@ -170,7 +168,7 @@ function App() {
         </div>
     </div>
 
-    <div className="modal fade" id="project3Modal" tabindex={-1}>
+    <div className="modal fade" id="project3Modal" tabIndex={-1}>
         <div className="modal-dialog modal-lg">
             <div className="modal-content">
                 <div className="modal-header">
@@ -183,7 +181,7 @@ function App() {
                         <img src={proj3} alt="EquiCity" className="img-fluid rounded shadow"/>
                     </div>
                     <div className="d-flex flex-wrap gap-2">
-                        <span className="badge rounded-pill custom-pill" style="background-color: #0d6efd;">Glide</span>
+                        <span className="badge rounded-pill custom-pill" style={{ backgroundColor: "#0d6efd" }}>Glide</span>
                     </div><br/>
                     <h6><i className="fas fa-info-circle"></i> Project Overview</h6>
                     <p>KoKoDishApp is a mobile commerce platform developed to promote and sell our CAPSTONE project
