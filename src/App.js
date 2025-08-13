@@ -1,4 +1,5 @@
 import './App.css';
+import herolui from './images/luis-hero-pic.jpg';
 import proj1 from './images/proj1-ems.png';
 import proj2 from './images/proj2-equicity.png';
 import proj3 from './images/proj3-capstone.png';
@@ -34,6 +35,8 @@ function App() {
                     <a href="#portfolio" className="btn btn-primary btn-lg"><i className="fas fa-rocket"></i> View My Work</a>
                 </div>
                 <div className="col-lg-6 col-md-6 text-center">
+                    <img src={herolui} alt="Hero Image"
+                        class="img-fluid rounded shadow w-75 w-md-100"></img>
                 </div>
             </div>
         </div>
