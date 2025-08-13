@@ -1,4 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
 import herolui from './images/luis-hero-pic.jpg';
 import proj1 from './images/proj1-ems.png';
@@ -7,6 +9,45 @@ import proj3 from './images/proj3-capstone.png';
 
 function App() {
     const formRef = useRef();
+
+    useEffect(() => {
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }) }
+            });
+        });
+
+        // Navbar scroll effect
+        const onScroll = () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(30, 64, 175, 0.95))';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.background = 'linear-gradient(135deg, var(--primary-blue), var(--secondary-blue))';
+                navbar.style.backdropFilter = 'none';
+            }
+        };
+        window.addEventListener('scroll', onScroll);
+
+        // Intersection observer for project cards
+        const observer = new window.IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) { entry.target.style.animation = 'fadeInUp 0.6s ease forwards' }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
+
+        document.querySelectorAll('.project-card').forEach(card => { observer.observe(card) });
+
+        // Cleanup
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+            observer.disconnect();
+        };
+    }, []);
 
     const handleContactSubmit = (e) => {
         e.preventDefault();
@@ -25,33 +66,6 @@ function App() {
         }
         form.reset();
     };
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }) }
-        });
-    });
-
-    window.addEventListener('scroll', function () {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 100) {
-            navbar.style.background = 'linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(30, 64, 175, 0.95))';
-            navbar.style.backdropFilter = 'blur(10px)';
-        } else {
-            navbar.style.background = 'linear-gradient(135deg, var(--primary-blue), var(--secondary-blue))';
-            navbar.style.backdropFilter = 'none';
-        }
-    });
-
-    const observer = new IntersectionObserver(function (entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) { entry.target.style.animation = 'fadeInUp 0.6s ease forwards' }
-        });
-    }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
-
-    document.querySelectorAll('.project-card').forEach(card => { observer.observe(card) });
 
   return (
     <>
@@ -84,7 +98,7 @@ function App() {
                 </div>
                 <div className="col-lg-6 col-md-6 text-center">
                     <img src={herolui} alt="Hero Image"
-                        class="img-fluid rounded shadow w-75 w-md-100"></img>
+                        className="img-fluid rounded shadow w-75 w-md-100"></img>
                 </div>
             </div>
         </div>
@@ -259,7 +273,7 @@ function App() {
             <div className="row justify-content-center">
                 <div className="col-lg-8">
                     <div className="contact-form">
-                        <form id="contactForm">
+                        <form id="contactForm" ref={formRef} onSubmit={handleContactSubmit}>
                             <div className="row">
                                 <div className="col-md-6 mb-3">
                                     <label htmlFor="firstName" className="form-label"><i className="fas fa-user"></i> First
