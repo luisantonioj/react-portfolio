@@ -129,6 +129,12 @@ function App() {
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Luis Antonio Jopia | C3A | Student Portfolio</p>
+        </div>
+    </footer>
     </>
   );
 }
