@@ -1,3 +1,4 @@
+import React, { useRef } from 'react';
 import './App.css';
 import herolui from './images/luis-hero-pic.jpg';
 import proj1 from './images/proj1-ems.png';
@@ -5,30 +6,25 @@ import proj2 from './images/proj2-equicity.png';
 import proj3 from './images/proj3-capstone.png';
 
 function App() {
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-        const message = document.getElementById('message').value.trim();
+    const formRef = useRef();
+
+    const handleContactSubmit = (e) => {
+        e.preventDefault();
+        const form = formRef.current;
+        const firstName = form.firstName.value;
+        const email = form.email.value;
+        const message = form.message.value.trim();
+
         if (message === "") {
-            const confirmProceed = confirm("You did not enter a message. Do you want to proceed without one?");
-            if (!confirmProceed) {
-                e.preventDefault();
+            if (!window.confirm("You did not enter a message. Do you want to proceed without one?")) {
                 return;
             }
-        }
-    });
-
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        const form = e.target;
-        const firstName = document.getElementById('firstName').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value.trim();
-        if (message) {
-            alert(`Thank you, ${firstName}!\n\nYour message has been received. We will respond to you at ${email} soon.`);
-        } else {
             alert(`Thank you, ${firstName}!\n\nWe will still contact you at ${email} soon.`);
+        } else {
+            alert(`Thank you, ${firstName}!\n\nYour message has been received. We will respond to you at ${email} soon.`);
         }
         form.reset();
-    });
+    };
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
