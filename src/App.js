@@ -91,6 +91,117 @@ function App() {
         </div>
     </section>
 
+    <div class="modal fade" id="project1Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" onclick="changeBackground()"><i class="bi bi-rocket-takeoff-fill"></i>
+                        Enrollment Management System </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-4 text-center">
+                        <img src="/images/proj1-ems.png" alt="Enrollment Management System"
+                            class="img-fluid rounded shadow"/>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge rounded-pill custom-pill" style="background-color: #0d6efd;">HTML5</span>
+                        <span class="badge rounded-pill custom-pill" style="background-color: #5f9ea0;">CSS3</span>
+                        <span class="badge rounded-pill custom-pill text-dark"
+                            style="background-color: #ced4da;">JavaScript</span>
+                        <span class="badge rounded-pill custom-pill text-dark"
+                            style="background-color: #b0c4de;">PHP</span>
+                        <span class="badge rounded-pill custom-pill" style="background-color: #343a40;">MySQL</span>
+                    </div><br/>
+                    <h6><i class="fas fa-info-circle"></i> Project Overview</h6>
+                    <p>This enrollment management system was developed as part of my academic coursework to streamline
+                        student record handling. It implements CRUD operations to manage student information, course
+                        listings, class enrollments, and class lists efficiently. The system emphasizes usability and
+                        accuracy in managing school data.</p>
+                    <h6><i class="fas fa-star"></i> Key Features</h6>
+                    <ul>
+                        <li>Add, view, update, and delete student records</li>
+                        <li>Manage course and subject listings</li>
+                        <li>Enroll students into classes with validation checks</li>
+                        <li>Generate and display class lists</li>
+                        <li>Responsive design for accessibility across devices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="project2Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" onclick="changeBackground()"><i class="bi bi-rocket-takeoff-fill"></i> EquiCity: Web-Based Urban Planner
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-4 text-center">
+                        <img src="images/proj2-equicity.png" alt="EquiCity" class="img-fluid rounded shadow"/>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge rounded-pill custom-pill" style="background-color: #0d6efd;">Figma</span>
+                    </div><br/>
+                    <h6><i class="fas fa-info-circle"></i> Project Overview</h6>
+                    <p>This web-based urban planning tool was a proposal developed to address Lipa City's worsening
+                        traffic congestion and unbalanced commercial growth. Designed primarily for local government
+                        use, the system uses real-time traffic data, population density, and infrastructure information
+                        to recommend optimal locations for future developments, supporting more equitable urban
+                        expansion and smarter zoning decisions.</p>
+                    <h6><i class="fas fa-star"></i> Key Features</h6>
+                    <ul>
+                        <li>Interactive heatmap displaying traffic flow, population clusters, facility locations, and
+                            available land</li>
+                        <li>Smart location recommendation algorithm for commercial hubs, schools, and public facilities
+                        </li>
+                        <li>Ranking system based on congestion relief, accessibility, land readiness, and growth
+                            potential</li>
+                        <li>Commercial impact gauge to estimate traffic generation of proposed developments</li>
+                        <li>Data-driven visualization for better planning decisions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="project3Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" onclick="changeBackground()">
+                    <h5 class="modal-title"><i class="bi bi-rocket-takeoff-fill"></i> KoKoDishApp: Capstone Project
+                        Selling Application</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-4 text-center">
+                        <img src="images/proj3-capstone.png" alt="EquiCity" class="img-fluid rounded shadow"/>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge rounded-pill custom-pill" style="background-color: #0d6efd;">Glide</span>
+                    </div><br/>
+                    <h6><i class="fas fa-info-circle"></i> Project Overview</h6>
+                    <p>KoKoDishApp is a mobile commerce platform developed to promote and sell our CAPSTONE project
+                        directly to nearby barangays. The app enables residents to conveniently browse, order, and learn
+                        more about the featured product. It focuses on local accessibility, user-friendly navigation,
+                        and real-time order management to strengthen community engagement and product reach.</p>
+                    <h6><i class="fas fa-star"></i> Key Features</h6>
+                    <ul>
+                        <li>Browse CAPSTONE product details with images and descriptions</li>
+                        <li>Place orders in real time</li>
+                        <li>Order history for customers</li>
+                        <li>Admin dashboard for managing product inventory and orders</li>
+                        <li>Notifications for order updates and promotions</li>
+                        <li>Mobile-optimized interface for seamless use on any device</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section id="contact" className="contact-section">
         <div className="container">
             <h2 className="section-title">Let's Connect</h2>
