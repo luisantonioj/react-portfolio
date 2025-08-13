@@ -5,6 +5,58 @@ import proj2 from './images/proj2-equicity.png';
 import proj3 from './images/proj3-capstone.png';
 
 function App() {
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        const message = document.getElementById('message').value.trim();
+        if (message === "") {
+            const confirmProceed = confirm("You did not enter a message. Do you want to proceed without one?");
+            if (!confirmProceed) {
+                e.preventDefault();
+                return;
+            }
+        }
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const form = e.target;
+        const firstName = document.getElementById('firstName').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value.trim();
+        if (message) {
+            alert(`Thank you, ${firstName}!\n\nYour message has been received. We will respond to you at ${email} soon.`);
+        } else {
+            alert(`Thank you, ${firstName}!\n\nWe will still contact you at ${email} soon.`);
+        }
+        form.reset();
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }) }
+        });
+    });
+
+    window.addEventListener('scroll', function () {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 100) {
+            navbar.style.background = 'linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(30, 64, 175, 0.95))';
+            navbar.style.backdropFilter = 'blur(10px)';
+        } else {
+            navbar.style.background = 'linear-gradient(135deg, var(--primary-blue), var(--secondary-blue))';
+            navbar.style.backdropFilter = 'none';
+        }
+    });
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) { entry.target.style.animation = 'fadeInUp 0.6s ease forwards' }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
+
+    document.querySelectorAll('.project-card').forEach(card => { observer.observe(card) });
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
