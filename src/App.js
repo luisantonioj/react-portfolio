@@ -1,5 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
+import proj1 from './images/proj1-ems.png';
+import proj2 from './images/proj2-equicity.png';
+import proj3 from './images/proj3-capstone.png';
 
 function App() {
   return (
@@ -43,9 +45,9 @@ function App() {
             <div className="row">
                 <div className="col-lg-4 col-md-6 mb-4">
                     <div className="project-card h-100">
-                        <div className="project-image"><img src="images/proj1-ems.png" alt="Enrollment"></img></div>
+                        <div className="project-image"><img src={proj1} alt="Enrollment"></img></div>
                         <div className="card-body p-4 d-flex flex-column">
-                            <h5 className="project-title" onclick="changeBackground()">Enrollment Management System</h5>
+                            <h5 className="project-title">Enrollment Management System</h5>
                             <p className="project-description">An enrollment management system that implements CRUD
                                 operations to efficiently handle student records, courses, enrollments, and className lists.
                             </p>
@@ -58,9 +60,9 @@ function App() {
                 </div>
                 <div className="col-lg-4 col-md-6 mb-4">
                     <div className="project-card h-100">
-                        <div className="project-image"><img src="images/proj2-equicity.png" alt="Gen-D"></img></div>
+                        <div className="project-image"><img src={proj2} alt="Gen-D"></img></div>
                         <div className="card-body p-4 d-flex flex-column">
-                            <h5 className="project-title" onclick="changeBackground()">EquiCity: Web-Based Urban Planner
+                            <h5 className="project-title">EquiCity: Web-Based Urban Planner
                             </h5>
                             <p className="project-description">A proposed web-based urban planning tool that promotes
                                 balanced growth in Lipa City by using real-time data to recommend optimal sites for
@@ -74,9 +76,9 @@ function App() {
                 </div>
                 <div className="col-lg-4 col-md-6 mb-4">
                     <div className="project-card h-100">
-                        <div className="project-image"><img src="images/proj3-capstone.png" alt="KoKoDishApp"></img></div>
+                        <div className="project-image"><img src={proj3} alt="KoKoDishApp"></img></div>
                         <div className="card-body p-4 d-flex flex-column">
-                            <h5 className="project-title" onclick="changeBackground()">KoKoDishApp: Capstone Product Selling
+                            <h5 className="project-title">KoKoDishApp: Capstone Product Selling
                                 Application</h5>
                             <p className="project-description">A mobile commerce platform designed to promote and sell our
                                 CAPSTONE project's products directly to nearby barangays.</p>
@@ -91,39 +93,39 @@ function App() {
         </div>
     </section>
 
-    <div class="modal fade" id="project1Modal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" onclick="changeBackground()"><i class="bi bi-rocket-takeoff-fill"></i>
+    <div className="modal fade" id="project1Modal" tabindex={-1}>
+        <div className="modal-dialog modal-lg">
+            <div className="modal-content">
+                <div className="modal-header">
+                    <h5 className="modal-title"><i className="bi bi-rocket-takeoff-fill"></i>
                         Enrollment Management System </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="mb-4 text-center">
-                        <img src="/images/proj1-ems.png" alt="Enrollment Management System"
-                            class="img-fluid rounded shadow"/>
+                <div className="modal-body">
+                    <div className="mb-4 text-center">
+                        <img src={proj1} alt="Enrollment Management System"
+                            className="img-fluid rounded shadow"/>
                     </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <span class="badge rounded-pill custom-pill" style="background-color: #0d6efd;">HTML5</span>
-                        <span class="badge rounded-pill custom-pill" style="background-color: #5f9ea0;">CSS3</span>
-                        <span class="badge rounded-pill custom-pill text-dark"
+                    <div className="d-flex flex-wrap gap-2">
+                        <span className="badge rounded-pill custom-pill" style="background-color: #0d6efd;">HTML5</span>
+                        <span className="badge rounded-pill custom-pill" style="background-color: #5f9ea0;">CSS3</span>
+                        <span className="badge rounded-pill custom-pill text-dark"
                             style="background-color: #ced4da;">JavaScript</span>
-                        <span class="badge rounded-pill custom-pill text-dark"
+                        <span className="badge rounded-pill custom-pill text-dark"
                             style="background-color: #b0c4de;">PHP</span>
-                        <span class="badge rounded-pill custom-pill" style="background-color: #343a40;">MySQL</span>
+                        <span className="badge rounded-pill custom-pill" style="background-color: #343a40;">MySQL</span>
                     </div><br/>
-                    <h6><i class="fas fa-info-circle"></i> Project Overview</h6>
+                    <h6><i className="fas fa-info-circle"></i> Project Overview</h6>
                     <p>This enrollment management system was developed as part of my academic coursework to streamline
                         student record handling. It implements CRUD operations to manage student information, course
-                        listings, class enrollments, and class lists efficiently. The system emphasizes usability and
+                        listings, className enrollments, and className lists efficiently. The system emphasizes usability and
                         accuracy in managing school data.</p>
-                    <h6><i class="fas fa-star"></i> Key Features</h6>
+                    <h6><i className="fas fa-star"></i> Key Features</h6>
                     <ul>
                         <li>Add, view, update, and delete student records</li>
                         <li>Manage course and subject listings</li>
-                        <li>Enroll students into classes with validation checks</li>
-                        <li>Generate and display class lists</li>
+                        <li>Enroll students into classNamees with validation checks</li>
+                        <li>Generate and display className lists</li>
                         <li>Responsive design for accessibility across devices</li>
                     </ul>
                 </div>
@@ -131,28 +133,28 @@ function App() {
         </div>
     </div>
 
-    <div class="modal fade" id="project2Modal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" onclick="changeBackground()"><i class="bi bi-rocket-takeoff-fill"></i> EquiCity: Web-Based Urban Planner
+    <div className="modal fade" id="project2Modal" tabindex={-1}>
+        <div className="modal-dialog modal-lg">
+            <div className="modal-content">
+                <div className="modal-header">
+                    <h5 className="modal-title"><i className="bi bi-rocket-takeoff-fill"></i> EquiCity: Web-Based Urban Planner
                     </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="mb-4 text-center">
-                        <img src="images/proj2-equicity.png" alt="EquiCity" class="img-fluid rounded shadow"/>
+                <div className="modal-body">
+                    <div className="mb-4 text-center">
+                        <img src={proj2} alt="EquiCity" className="img-fluid rounded shadow"/>
                     </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <span class="badge rounded-pill custom-pill" style="background-color: #0d6efd;">Figma</span>
+                    <div className="d-flex flex-wrap gap-2">
+                        <span className="badge rounded-pill custom-pill" style="background-color: #0d6efd;">Figma</span>
                     </div><br/>
-                    <h6><i class="fas fa-info-circle"></i> Project Overview</h6>
+                    <h6><i className="fas fa-info-circle"></i> Project Overview</h6>
                     <p>This web-based urban planning tool was a proposal developed to address Lipa City's worsening
                         traffic congestion and unbalanced commercial growth. Designed primarily for local government
                         use, the system uses real-time traffic data, population density, and infrastructure information
                         to recommend optimal locations for future developments, supporting more equitable urban
                         expansion and smarter zoning decisions.</p>
-                    <h6><i class="fas fa-star"></i> Key Features</h6>
+                    <h6><i className="fas fa-star"></i> Key Features</h6>
                     <ul>
                         <li>Interactive heatmap displaying traffic flow, population clusters, facility locations, and
                             available land</li>
@@ -168,27 +170,27 @@ function App() {
         </div>
     </div>
 
-    <div class="modal fade" id="project3Modal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header" onclick="changeBackground()">
-                    <h5 class="modal-title"><i class="bi bi-rocket-takeoff-fill"></i> KoKoDishApp: Capstone Project
+    <div className="modal fade" id="project3Modal" tabindex={-1}>
+        <div className="modal-dialog modal-lg">
+            <div className="modal-content">
+                <div className="modal-header">
+                    <h5 className="modal-title"><i className="bi bi-rocket-takeoff-fill"></i> KoKoDishApp: Capstone Project
                         Selling Application</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="mb-4 text-center">
-                        <img src="images/proj3-capstone.png" alt="EquiCity" class="img-fluid rounded shadow"/>
+                <div className="modal-body">
+                    <div className="mb-4 text-center">
+                        <img src={proj3} alt="EquiCity" className="img-fluid rounded shadow"/>
                     </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <span class="badge rounded-pill custom-pill" style="background-color: #0d6efd;">Glide</span>
+                    <div className="d-flex flex-wrap gap-2">
+                        <span className="badge rounded-pill custom-pill" style="background-color: #0d6efd;">Glide</span>
                     </div><br/>
-                    <h6><i class="fas fa-info-circle"></i> Project Overview</h6>
+                    <h6><i className="fas fa-info-circle"></i> Project Overview</h6>
                     <p>KoKoDishApp is a mobile commerce platform developed to promote and sell our CAPSTONE project
                         directly to nearby barangays. The app enables residents to conveniently browse, order, and learn
                         more about the featured product. It focuses on local accessibility, user-friendly navigation,
                         and real-time order management to strengthen community engagement and product reach.</p>
-                    <h6><i class="fas fa-star"></i> Key Features</h6>
+                    <h6><i className="fas fa-star"></i> Key Features</h6>
                     <ul>
                         <li>Browse CAPSTONE product details with images and descriptions</li>
                         <li>Place orders in real time</li>
@@ -211,23 +213,23 @@ function App() {
                         <form id="contactForm">
                             <div className="row">
                                 <div className="col-md-6 mb-3">
-                                    <label for="firstName" className="form-label"><i className="fas fa-user"></i> First
+                                    <label htmlFor="firstName" className="form-label"><i className="fas fa-user"></i> First
                                         Name</label>
                                     <input type="text" className="form-control" id="firstName" placeholder="Enter your first name" required/>
                                 </div>
                                 <div className="col-md-6 mb-3">
-                                    <label for="lastName" className="form-label"><i className="fas fa-user"></i> Last
+                                    <label htmlFor="lastName" className="form-label"><i className="fas fa-user"></i> Last
                                         Name</label>
                                     <input type="text" className="form-control" id="lastName" placeholder="Enter your last name" required/>
                                 </div>
                             </div>
                             <div className="mb-3">
-                                <label for="email" className="form-label"><i className="fas fa-envelope"></i> Email
+                                <label htmlFor="email" className="form-label"><i className="fas fa-envelope"></i> Email
                                     Address</label>
                                 <input type="email" className="form-control" id="email" placeholder="your.email@example.com" required/>
                             </div>
                             <div className="mb-3">
-                                <label for="message" className="form-label"><i className="fas fa-comment"></i> Message</label>
+                                <label htmlFor="message" className="form-label"><i className="fas fa-comment"></i> Message</label>
                                 <textarea className="form-control" id="message" rows="5" placeholder="Type your message here..."></textarea>
                             </div>
                             <div className="text-center">
@@ -241,8 +243,8 @@ function App() {
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
+    <footer className="footer">
+        <div className="container">
             <p>&copy; Luis Antonio Jopia | C3A | Student Portfolio</p>
         </div>
     </footer>
