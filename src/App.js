@@ -278,22 +278,22 @@ function App() {
                                 <div className="col-md-6 mb-3">
                                     <label htmlFor="firstName" className="form-label"><i className="fas fa-user"></i> First
                                         Name</label>
-                                    <input type="text" className="form-control" id="firstName" placeholder="Enter your first name" required/>
+                                    <input type="text" className="form-control" id="firstName" name="firstName" placeholder="Enter your first name" required/>
                                 </div>
                                 <div className="col-md-6 mb-3">
                                     <label htmlFor="lastName" className="form-label"><i className="fas fa-user"></i> Last
                                         Name</label>
-                                    <input type="text" className="form-control" id="lastName" placeholder="Enter your last name" required/>
+                                    <input type="text" className="form-control" id="lastName" name="lastName" placeholder="Enter your last name" required/>
                                 </div>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="email" className="form-label"><i className="fas fa-envelope"></i> Email
                                     Address</label>
-                                <input type="email" className="form-control" id="email" placeholder="your.email@example.com" required/>
+                                <input type="email" className="form-control" id="email" name="email" placeholder="your.email@example.com" required/>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="message" className="form-label"><i className="fas fa-comment"></i> Message</label>
-                                <textarea className="form-control" id="message" rows="5" placeholder="Type your message here..."></textarea>
+                                <textarea className="form-control" id="message" name="message" rows="5" placeholder="Type your message here..."></textarea>
                             </div>
                             <div className="text-center">
                                 <button type="submit" className="btn btn-primary btn-lg"><i className="fas fa-paper-plane"></i>
