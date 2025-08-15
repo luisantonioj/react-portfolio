@@ -316,7 +316,7 @@ function App() {
 
     <footer className="footer">
         <div className="container">
-            <p>&copy; Luis Antonio Jopia | C3A | Student Portfolio</p>
+            <p>&copy; Luis Antonio Jopia • C3A • Student Portfolio</p>
             <div class="social-icons">
                 <a href="https://www.facebook.com/luisantonio.jopia.1" 
                     target="_blank" 
