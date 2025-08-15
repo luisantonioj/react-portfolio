@@ -172,8 +172,7 @@ function App() {
         <div className="modal-dialog modal-lg">
             <div className="modal-content">
                 <div className="modal-header">
-                    <h5 className="modal-title"><i className="bi bi-rocket-takeoff-fill"></i>
-                        Enrollment Management System </h5>
+                    <h5 className="modal-title"><i className="bi bi-rocket-takeoff-fill"></i> Enrollment Management System </h5>
                     <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div className="modal-body">
