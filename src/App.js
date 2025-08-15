@@ -306,8 +306,7 @@ function App() {
                                 <textarea className="form-control" id="message" name="message" rows="5" placeholder="Type your message here..."></textarea>
                             </div>
                             <div className="text-center">
-                                <button type="submit" className="btn btn-primary btn-lg"><i className="fas fa-paper-plane"></i>
-                                    Send Message</button>
+                                <button type="submit" className="btn btn-primary btn-lg"><i className="fas fa-paper-plane"></i> Send Message</button>
                             </div>
                         </form>
                     </div>
