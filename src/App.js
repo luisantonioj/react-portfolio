@@ -97,8 +97,18 @@ function App() {
                     <a href="#portfolio" className="btn btn-primary btn-lg"><i className="fas fa-rocket"></i> View My Work</a>
                 </div>
                 <div className="col-lg-6 col-md-6 text-center">
-                    <img src={herolui} alt="Hero Image"
-                        className="img-fluid rounded shadow w-75 w-md-100"></img>
+                    <div className="hero-image-wrapper position-relative d-inline-block">
+                        <img 
+                            src={herolui} 
+                            alt="Hero Image"
+                            className="img-fluid rounded shadow w-75 w-md-100"
+                        />
+
+                        {/* Floating circles */}
+                        <div className="floating-element small"></div>
+                        <div className="floating-element medium"></div>
+                        <div className="floating-element large"></div>
+                    </div>
                 </div>
             </div>
         </div>

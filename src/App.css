@@ -126,6 +126,60 @@ hero-section .row {
     animation: fadeInUp 1s ease 0.4s both
 }
 
+.hero-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Floating elements around image */
+.floating-element {
+    position: absolute;
+    background: linear-gradient(135deg, var(--primary-blue, #4f9cff), var(--accent-blue, #1a73e8));
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: floatAround 4s ease-in-out infinite;
+}
+
+.floating-element.small {
+    width: 15px;
+    height: 15px;
+}
+
+.floating-element.medium {
+    width: 25px;
+    height: 25px;
+}
+
+.floating-element.large {
+    width: 35px;
+    height: 35px;
+}
+
+.hero-image-wrapper .floating-element:nth-child(2) {
+    top: 10%;
+    right: -20px;
+    animation-delay: -1s;
+}
+
+.hero-image-wrapper .floating-element:nth-child(3) {
+    bottom: 15%;
+    left: -30px;
+    animation-delay: -2s;
+}
+
+.hero-image-wrapper .floating-element:nth-child(4) {
+    top: 40%;
+    right: -40px;
+    animation-delay: -3s;
+}
+
+@keyframes floatAround {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(10px, -15px) rotate(90deg); }
+    50% { transform: translate(-5px, -25px) rotate(180deg); }
+    75% { transform: translate(-15px, -10px) rotate(270deg); }
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
